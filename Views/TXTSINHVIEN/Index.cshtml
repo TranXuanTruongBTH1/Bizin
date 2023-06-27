@@ -1,0 +1,47 @@
+@model IEnumerable<Bingit.Models.TXTSINHVIEN>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+             <th>
+                @Html.DisplayNameFor(model => model.MASV)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NAME)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MALOP)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MASV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NAME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MALOP)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.MASV">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.MASV">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.MASV">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

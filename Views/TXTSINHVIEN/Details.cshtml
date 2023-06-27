@@ -1,0 +1,35 @@
+@model Bingit.Models.TXTSINHVIEN
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>TXTSINHVIEN</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MASV)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MASV)
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NAME)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NAME)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MALOP)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MALOP)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.MASV">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
